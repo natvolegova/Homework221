@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Homework221</string>
+    <string name="btn_text">Добавить заметку</string>
+    <string name="hint_inputText">Введите текст</string>
+    <string name="label_main">Заметки</string>
+    <string name="message_add_note">Запись добавлена: </string>
+</resources>
