@@ -30,10 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btnSaveNote = findViewById(R.id.btnSaveNote);
         myShPreference = getSharedPreferences("MyNote", MODE_PRIVATE); //создали файл MyNote с переменными
 
-        //добавим инициализацию полей для вывода результатов
-        resultNote = findViewById(R.id.resultNote);
-
-        btnSaveNote.setOnClickListener(new View.OnClickListener() {
+             btnSaveNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SharedPreferences.Editor editor = myShPreference.edit();
@@ -42,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
                 editor.apply();
                 Toast.makeText(MainActivity.this, getString(R.string.message_add_note) + inputresult, Toast.LENGTH_LONG).show();
 
-                resultNote.setText(inputresult);  //добавим вывод заметок в поле со списком значений
+                inputNote.setText(inputresult);  //добавим вывод заметок в поле со списком значений
             }
         });
     }
     private void getDateFromSharedPref(){
         String inputresult = myShPreference.getString(NOTE_TEXT, "");
-        resultNote.setText(inputresult);  //добавим вывод заметок в поле со списком значений
+        inputNote.setText(inputresult);  //добавим вывод заметок в поле со списком значений
     }
 
 }
